@@ -2,6 +2,12 @@
 	require_once('../SBClientSDK/SBApp.php'); //Cambiar Aqui por la ruta que tengas tu el SDK de SB
 	require_once ('timeline.php'); //timeline con los tweets de twitter
 	require_once ('datos.php');//incluye un array con los datos de conexion por comodidad de no ponerlos en todas las apps.
+	require_once ('configApp.php'); //Opcionaalmente incluyo  aqui la configuracion de la app en si.. de los mensajes que da y eso.. Lo normal seria tenerlo separado de este script si este fuera a ejecutarse con cron
+
+
+	$confApp = new configApp ($SBCode,$SBKey);
+	$confApp ->serveRequest($_GET["params"]);
+	
 
 	//Envia Notificacion a todos los usuarios de la SBapp sin necesitar que esta le haya enviado nada.
 	class enviarNotificacion extends SBClientApi
