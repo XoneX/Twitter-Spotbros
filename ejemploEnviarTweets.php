@@ -1,4 +1,5 @@
 <?php
+//by Xenox :)
 	require_once('../SBClientSDK/SBApp.php'); //Cambiar Aqui por la ruta que tengas tu el SDK de SB
 	require_once ('timeline.php'); //timeline con los tweets de twitter
 	require_once ('datos.php');//incluye los datos de conexion por comodidad de no ponerlos en todas las apps.
