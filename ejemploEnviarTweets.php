@@ -28,7 +28,7 @@
 	
 	//Crea un objeto de la clase timeline de twitter y obtiene los tuits!
 	$timeline= new timeline($settings,"Spotbros","&count=4&exclude_replies=true"); //Datos Api,Usuario,Parametros como el nº de tweets a traer
-	//$count=4 significa que obtenga 4 tweets, &exclude_replies que no nos envie las respuestas a usuarios.
+	//Donde pone Spotbros va el usuario de Twitter, $count=4 significa que obtenga 4 tweets, &exclude_replies que no nos envie las respuestas a usuarios.
 	
 	$jsonDec=$timeline->getJsonDecoded(); //obtiene el json Decodificado.
 	$count = count($jsonDec); //Cuenta los Tweets del json.
